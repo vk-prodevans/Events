@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-// import './Styles/header.css'
+import '../../Styles/Header.css'
 
 
 const Header = () => {
@@ -9,20 +9,20 @@ const Header = () => {
       <header>
         <div className="image-container">
           <Image
-            src="/prodev.png" 
+            src='/prodevans-logo.png' 
             alt="logo"
-            width={100} 
-            height={50} 
+            width={200} 
+            height={100} 
           />
         </div> 
        
         
-        <h1 className="heading">Demo</h1>
-       
-         <div className="search-bar">
-          <input type="text" className="search-input" placeholder="Search" />
-          <img src='/search-icon.png' alt="Search" className="search-icon" />
-        </div>
+        <h1 className="heading">Weekly Demo</h1>
+        <div className="search">
+                <input className="srch" type="search" name="" placeholder="Type To text"/>
+                <a href="#"> <button className="btn">Search</button></a>
+            </div>  
+     
       </header>
     </div>
   );

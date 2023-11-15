@@ -1,0 +1,75 @@
+
+.logo img {
+    /* padding: 10px; */
+    width: 100px;
+    height: auto;
+  }
+  /*
+  <img alt="PD Logo" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdlightthemebluetext.7167543f.png&w=1920&q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdlightthemebluetext.7167543f.png&w=3840&q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdlightthemebluetext.7167543f.png&w=3840&q=75" decoding="async" data-nimg="intrinsic" style="">
+  */
+
+  .header-content {
+    flex: 1;
+    text-align: center;
+  }
+
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #24262b;
+    color: white;
+    padding: 15px;
+    /* border: 3px solid rgb(16, 15, 15); */
+    
+  }
+  
+  .search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+  }
+  
+  .srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fdfbfa;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  .btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #fdfbfa;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  .btn:hover{
+    color: #000;
+  }
+  
+  .btn:focus{
+    outline: none;
+  }
+  
+  .srch:focus{
+    outline: none;
+  }
+
+  

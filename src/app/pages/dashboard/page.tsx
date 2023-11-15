@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import Header from '@/app/components/header/page';
 import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
-import Profile from '@/app/Profile';
 import AllDemo from '../../AllDemo';
 import Demo from '@/app/components/demo';
+import Profile from '@/app/components/profile';
 
 const Page = () => {
      const [selectedContent, setSelectedContent] = useState('main');
