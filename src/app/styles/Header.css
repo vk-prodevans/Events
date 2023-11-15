@@ -12,7 +12,10 @@
     flex: 1;
     text-align: center;
   }
-
+ .heading{
+  font-size: 30px;
+  align-items: center;
+ }
 
   header {
     display: flex;
