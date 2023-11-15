@@ -71,5 +71,49 @@
   .srch:focus{
     outline: none;
   }
+/* home css */
+ .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  
+.menu ul li {
+  display: inline;
+  /* margin-right: 60px; */
+}
+
+.menu ul li:last-child {
+  /* margin-right: -700px; */
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  text-align: right;
+  /* margin-left: 208px; */
+}
+ul{
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li{
+  list-style: none;
+  /* margin-left: 62px;
+  margin-top: 27px; */
+  font-size: 14px;
+}
+
+ul li a{
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+  color: #ff7200;
+}
+   
