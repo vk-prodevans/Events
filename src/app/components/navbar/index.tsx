@@ -7,9 +7,7 @@ const Navbar = ({ handleContentChange }) => {
     <div className='sidebar'>
      <nav >
       <ul>
-        <li>
-          <a onClick={() => handleContentChange("main")}>Main</a>
-        </li>
+      
         <li>
           <a onClick={() => handleContentChange("profile")}>Profile</a>
           </li>

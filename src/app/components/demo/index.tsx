@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
-// import './Styles/demo.css'
+// import './Styles/Demo.css'
 import UploadFile from '../uploadFile';
 import TechVersionDropdown from '../techVersionDropdown';
+import '../../styles/Demo.css'
 
 const Demo = () => {
   const [formData, setFormData] = useState({
