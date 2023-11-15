@@ -14,9 +14,7 @@ const Header = () => {
             width={200} 
             height={100} 
           />
-        </div> 
-       
-        
+        </div>
         <h1 className="heading">Weekly Demo</h1>
         <div className="search">
                 <input className="srch" type="search" name="" placeholder="Type To text"/>
@@ -27,6 +25,23 @@ const Header = () => {
     </div>
   );
 }
+
+export  function HomepageHeader() {
+  return (
+    <div className="navbar">
+      <div className="icon">
+        <Image src="/prodevans-logo.png" width={200} height={100} alt="PD Logo" />
+      </div>
+      <div className="menu">
+                <ul>
+                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="Dashboard.html">DASHBOARD</a></li>
+                </ul>
+            </div>
+    </div>
+  )
+}
+
 
 export default Header;
 
