@@ -1,0 +1,92 @@
+  /* Apply basic styling to the body and set the font family */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set styles for the container */
+.container {
+    max-width: 800px;
+    margin: 80px;
+    margin-left: 450px;
+}
+
+/* Style the card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+h4{
+    background-color: rgb(0, 255, 132);
+    padding-top: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h4:hover{
+    background-color: azure;
+}
+
+/* Style the sub-cards within the main card */
+.slot-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Style the links within the sub-cards */
+.slot-card a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style the button tab */
+.button-tab {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+
+/* Style the buttons within the button tab */
+.button-tab button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the links within the buttons */
+.button-tab button a {
+    
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style the buttons with different background colors */
+.button-tab button:nth-child(1) {
+    background-color: blue; /* Green */
+}
+
+.button-tab button:nth-child(1):hover{
+    background-color: green;
+}
+
+.button-tab button:nth-child(2) {
+    background-color: #f44336; /* Red */
+}
+.button-tab button:nth-child(2):hover {
+    background-color:green;
+}
+
+
+

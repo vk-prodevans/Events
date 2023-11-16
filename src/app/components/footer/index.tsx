@@ -6,7 +6,7 @@ import { SocialIcon } from 'react-social-icons'
     return (
         <div className='footer'>
         <div className="footer-col">
-         <h4>follow us</h4>
+         <h3>follow us</h3>
          <div className="social-links">
          <SocialIcon network='facebook' bgColor='black' href='https://www.facebook.com/ProdevansTechnologies/'/>
          <SocialIcon network='instagram' bgColor='black' href='https://www.instagram.com/prodevans.l/'/>
