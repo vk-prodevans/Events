@@ -1,15 +1,13 @@
-"use client"
 import React from 'react'
 import { useState } from 'react';
-import TechVersionDropdown from '@/app/components/techVersionDropdown';
-import UploadFile from '@/app/components/uploadFile';
-import '../../styles/demo.css'
+// import './Styles/Demo.css'
+import UploadFile from '../uploadFile';
+import TechVersionDropdown from '../techVersionDropdown';
+import '../../styles/Demo.css'
 
-
-const page = () => {
-  const [nameError, setNameError] = React.useState("");
+const BookDemo = () => {
   
-  const [formData, setFormData] = useState({
+   const [formData, setFormData] = useState({
     names: ['', '', ''],
     emails: ['', '', ''],
     topic: '',
@@ -21,17 +19,9 @@ const page = () => {
     const updatedNames = [...formData.names];
     updatedNames[index] = e.target.value;
     setFormData({ ...formData, names: updatedNames });
-    const newName = e.target.value;
-    setNameError(newName);
-    if (!newName) {
-      setNameError('Name is required');
-    } else {
-      setNameError('');
-    }
-    
   };
- 
 
+  
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
     const updatedEmails = [...formData.emails];
@@ -44,40 +34,22 @@ const page = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  
-  const [emailError, setEmailError] = React.useState("");
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if(!formData.names || formData.names.length){
-      setNameError("Name is required");
-      return false;
-    }
-
-    if (!formData.emails || formData.emails.length) {
-      setEmailError("Email is required");
-      return false;
-    }
-    
     // Handle form submission here
   };
-  //error handling
- 
 
   return (
     <form className="contactForm" onSubmit={handleSubmit}>
       {formData.names.map((name, index) => (
         <div key={index} className='inputGroup'>
           <input
-          //  error={nameError && nameError.length ? true : false}
             type="text"
             className='inputField'
             placeholder={`Name ${index + 1}`}
             value={name}
             onChange={(e) => handleNameChange(e, index)}
-            // helperText={nameError}
           />
-           {nameError && <span style={{ color: 'red' }}>{nameError}</span>}
           <input
             type="email"
             className="inputField"
@@ -119,8 +91,7 @@ const page = () => {
       <button type="submit" className='submitButton'>Submit</button>
     </form>
 
-
   )
 }
 
-export default page
+export default BookDemo
