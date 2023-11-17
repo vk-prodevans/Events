@@ -1,0 +1,102 @@
+  /* Apply basic styling to the body and set the font family */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set styles for the container */
+.container {
+    max-width: 800px;
+    margin: 80px;
+    margin-left: 450px;
+}
+
+/* Style the card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+    
+}
+input[type="date"] {
+    /* padding: 8px; */
+    background-color: aqua;
+    border: none;
+    border-radius: 4px;
+    /* margin-top: 5px; */
+    font-size: 16px;
+  }
+  input[type="date"]:hover {
+    /* padding: 8px; */
+    background-color: rgba(240, 229, 239, 0.957);
+    
+  }
+
+h4{
+    background-color: aqua;
+    padding-top: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h4:hover{
+    background-color: rgba(240, 229, 239, 0.957);
+}
+
+/* Style the sub-cards within the main card */
+.sub-card-one,
+.sub-card-three {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Style the links within the sub-cards */
+.sub-card-one a,
+.sub-card-three a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+/* Style the button tab */
+.button-tab {
+    display: flex;
+    
+    background-color: #ccc;
+  }
+
+  .button-tab form {
+    margin-top: 10px;
+    margin-left: 150px; /* Remove default form margin */
+    
+  }
+
+  .button-tab button {
+    padding: 10px 20px;
+    background-color: blue; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Add cursor pointer on hover */
+  }
+
+  .button-tab button:hover{
+    background-color: green;
+  }
+
+  /* Style for the Back button */
+  .button-tab button.back {
+    background-color: #f44336; /* Red background color */
+  }
+
+.button-tab button.back:hover{
+    background-color: green;
+}

@@ -13,16 +13,15 @@ const Page = () => {
       <div className="content">
         <Image src="/book.jpg" width={270} height={300} alt="PD Logo" />
         <h1>
-          Web Design & <br />
-          <span>Development</span> <br />
-          Course
+          Prodevans Technologies Pvt Ltd <br />
+          <span>weekly demo</span> 
         </h1>
         <p className="par">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque
-          expedita atque eveniet
-          <br /> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad
-          delectus
-          <br /> a quae totam ipsa illum minus laudantium?
+        Our weekly content demo isn’t just a showcase
+          <br />it’s a collaborative opportunity to explore, learn, and grow together. Learn about different content formats, storytelling techniques,
+          and audience engagement strategies.  
+          <br /> This knowledge can be applied
+          across departments to enhance communication and presentation skills.
         </p>
         <button className="cn">
           <a href="#">JOIN US</a>
