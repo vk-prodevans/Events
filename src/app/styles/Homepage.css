@@ -1,8 +1,13 @@
+body{
+    margin: auto;
+    display: block;
+}
 .main{
-     background: rgb(139, 110, 166);
+    background: linear-gradient(116.18deg,#447ab6,#9933a3 99.08%);
     background-position: center;
     background-size: cover;
     height: 100vh;
+    
 }
 .icon img{
     width: 170px; 
@@ -15,6 +20,7 @@
     color: #fff;
     position: relative;
     margin-left: 300px;
+
 }
 .content img {
     width: 270px;
@@ -33,7 +39,7 @@
 .content h1{
     font-family: 'Times New Roman';
     font-size: 50px;
-    padding-left: 40px;
+    padding-left: 20px;
     margin-top: 9%;
     letter-spacing: 2px;
 }
@@ -64,5 +70,6 @@
 
 .content span{
     color: #ff7200;
-    font-size: 65px
+    font-size: 65px;
+
 }
