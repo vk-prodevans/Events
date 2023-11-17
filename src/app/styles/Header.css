@@ -13,8 +13,8 @@
     text-align: center;
   }
  .heading{
-  font-size: 30px;
-  align-items: center;
+  font-size: 35px;
+  padding-left: 350px;
  }
 
   header {
@@ -74,5 +74,5 @@
   .srch:focus{
     outline: none;
   }
-
+ 
   

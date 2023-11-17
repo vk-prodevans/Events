@@ -1,65 +1,33 @@
 .sidebar {
-    width: 250px;
-    background-color: #333;
-    color: #fff;
-    /* position: fixed; */
-    height: 100%;
-    overflow: auto;
-    text-align: center;
-    bottom: 60%;
-    font-size: 25px; 
-    
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 50px;
-  }
-  
-  .sidebar li {
-    padding: 10px;
-  }
-  
-  .sidebar Link {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .sidebar Link:hover {
-    text-decoration: underline;
-  }
-  
-  .btn{
-    width: 100px;
-    height: 40px;
-    background: #ff7200;
-    border: 2px solid #fdfbfa;
-    margin-top: 13px;
-    color: #fff;
-    font-size: 15px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    transition: 0.2s ease;
-    cursor: pointer;
-  }
-  .btn:hover{
-    color: #000;
-  }
-  
-  .btn:focus{
-    outline: none;
-  }
-  
-  .srch:focus{
-    outline: none;
-  }
+  width: 250px;
+  background: linear-gradient(116.18deg,#447ab6,#9933a3 99.08%);
+  color: white;
+  /* position: fixed; */
+  height: 100%;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+  border-inline-color: white;
 
-  
+}
 
-  
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
 
+.sidebar li {
+  padding: 10px;
+}
 
-  
+.sidebar Link {
+  text-decoration: none;
+  color: #fff;
+}
 
-  
-  
+.sidebar Link:hover {
+  text-decoration: underline;
+}
+

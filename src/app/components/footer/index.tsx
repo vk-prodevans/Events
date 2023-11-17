@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../../Styles/Footer.css'
 import { SocialIcon } from 'react-social-icons'
   
   export default function Footer() {
@@ -14,6 +14,7 @@ import { SocialIcon } from 'react-social-icons'
          <SocialIcon network='google'bgColor='black' href='https://www.prodevans.com/'/>
          </div>
        </div>
+       
      </div>
     )
   }

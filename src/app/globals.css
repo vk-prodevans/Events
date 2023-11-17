@@ -95,20 +95,24 @@ footer {
 
 Navbar {
   flex: 0 0 217px;
-
   background-color: #333;
-
   color: #fff;
-
   padding: 20px;
 
 }
 
 
 .main-content {
-  flex: 1;
-
-  padding: 20px;
+  /* padding: 20px; */
+  background: linear-gradient(116.18deg,#447ab6,#9933a3 99.08%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-y:scroll ;
 
 }
 .sidebar {

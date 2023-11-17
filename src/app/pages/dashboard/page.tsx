@@ -26,9 +26,11 @@ const Page = () => {
           {selectedContent === 'demo' && <Demo />}
         </main>
       </div>
-      <Footer />
+     
     </div>
+    <Footer/>
     </div>
+  
   )
 }
 

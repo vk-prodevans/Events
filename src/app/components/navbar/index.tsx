@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Link from 'next/link';
+import '../../styles/Navbar.css'
 
 const Navbar = ({ handleContentChange }) => {
   return (
