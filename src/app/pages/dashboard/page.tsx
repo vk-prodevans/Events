@@ -7,7 +7,7 @@ import Demo from '@/app/components/demo';
 import Profile from '@/app/components/profile';
 import BookSlot from '@/app/components/bookslot';
 import BookDemo from '@/app/components/bookdemo';
-
+import AllDemo from '@/app/components/alldemo';
 type PageContent = 'main' | 'profile' | 'all-demo' | 'demo';
 
 const Page = () => {

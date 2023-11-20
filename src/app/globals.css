@@ -43,8 +43,8 @@ footer {
   background-color: #24262b;
   padding: 10px 0;
   text-align: center;
-  /* Center the content horizontally */
-  /* position: fixed; */
+
+
   bottom: 0;
   width: 100%;
   right: 0;
@@ -78,7 +78,7 @@ footer {
   background-color: #ffffff;
 }
 
-.maincontent {
+.main-content {
   height: 100vh;
 }
 
@@ -107,6 +107,7 @@ Navbar {
   padding: 20px;
 
 }
+
 .sidebar {
   width: 250px;
   background-color: greenyellow;
@@ -145,4 +146,17 @@ Navbar {
 } */
 Link {
   color: #fff;
+}
+
+.filesubmit {
+  display: flex;
+
+}
+
+.upload {
+  width: 80px;
+}
+
+.choose {
+  width: 200px;
 }

@@ -6,14 +6,17 @@ const UploadFile = () => {
  const [file, setFile] = useState<File>()
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+          console.log("working")
     e.preventDefault()
+
     if (!file) return
 
     try {
       const data = new FormData()
       data.set('file', file)
+      console.log("working")
 
-      const res = await fetch('/api/upload', {
+      const res = await fetch('http://localhost:8181/api/files/upload', {
         method: 'POST',
         body: data
       })
@@ -26,13 +29,14 @@ const UploadFile = () => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className='filesubmit'>
       <input
+        className='choose'
         type="file"
         name="file"
         onChange={(e) => setFile(e.target.files?.[0])}
       />
-      <input type="submit" value="Upload" />
+      <input type="submit" value="Upload" className='upload' />
     </form>
   )
 }

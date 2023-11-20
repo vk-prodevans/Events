@@ -9,7 +9,7 @@ const TechVersionDropdown: React.FC = () => {
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [selectedVersion, setSelectedVersion] = useState<string | null>(null);
 
-  const technologies = ['React', 'Angular', 'Vue']; // Add your technologies here
+  const technologies = ['React', 'Angular', 'Vue']; 
   const versions: Record<string, string[]> = {
     React: ['16.0', '17.0'],
     Angular: ['2.0', '4.0', '8.0'],

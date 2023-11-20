@@ -6,27 +6,46 @@ import TechVersionDropdown from '../techVersionDropdown';
 import '../../styles/Demo.css'
 
 const BookDemo = () => {
-  
+  const [formCounter, setFormCounter] = useState(1);
+  const [inputValue, setInputValue] = useState<string>('');
+  const [isValid, setIsValid] = useState<boolean>(true);
    const [formData, setFormData] = useState({
     names: ['', '', ''],
     emails: ['', '', ''],
     topic: '',
     description: '',
     techStack: '',
-  });
-
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
-    const updatedNames = [...formData.names];
-    updatedNames[index] = e.target.value;
-    setFormData({ ...formData, names: updatedNames });
+   });
+   const addFormGroup = () => {
+    setFormCounter(formCounter + 1);
   };
+  const removeFormGroup = (index:number) => {
+    
+    const updatedFormGroups = [...Array(formCounter)].filter((_, i) => i !== index);
+    setFormCounter(updatedFormGroups.length);
+  };
+
+  // const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
+  //   const updatedNames = [...formData.names];
+  //   updatedNames[index] = e.target.value;
+  //   setFormData({ ...formData, names: updatedNames });
+  // };
 
   
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
-    const updatedEmails = [...formData.emails];
-    updatedEmails[index] = e.target.value;
-    setFormData({ ...formData, emails: updatedEmails });
+ const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue: string = event.target.value;
+     setInputValue(newValue);
+  
+
+    const isValidInput: boolean = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newValue);
+    setIsValid(isValidInput);
+  };
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue: string = event.target.value;
+    setInputValue(newValue);
+    const isValidInput: boolean = /^[a-zA-Z\s]+$/.test(newValue);
+    setIsValid(isValidInput);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -41,24 +60,18 @@ const BookDemo = () => {
 
   return (
     <form className="contactForm" onSubmit={handleSubmit}>
-      {formData.names.map((name, index) => (
-        <div key={index} className='inputGroup'>
-          <input
-            type="text"
-            className='inputField'
-            placeholder={`Name ${index + 1}`}
-            value={name}
-            onChange={(e) => handleNameChange(e, index)}
-          />
-          <input
-            type="email"
-            className="inputField"
-            placeholder={`Email ${index + 1}`}
-            value={formData.emails[index]}
-            onChange={(e) => handleEmailChange(e, index)}
-          />
-        </div>
-      ))}
+       {[...Array(formCounter)].map((_, index) => (
+          <div className="form-group" key={`group${index + 1}`}>
+            <label htmlFor={`name${index + 1}`}>Name</label>
+           <input type="text" id={`name${index + 1}`} pattern="^[a-zA-Z\s]+$" onChange={handleInput} placeholder="Enter name" />
+            {!isValid && <p style={{ color: 'red' }}>Please Enter Vlid name</p>}
+            <label htmlFor={`email${index + 1}`}>Email</label>
+           <input type="text" id={`email${index + 1}`} placeholder="Enter email" onChange={handleEmailChange} />
+            {!isValid && <p style={{ color: 'red' }}>Please Enter Vlid email</p>}
+            <button type="button" className='add-btn' onClick={addFormGroup}>+</button>
+            {formCounter > 1 && <button type="button" className='remove-btn' onClick={() => removeFormGroup(index)}>-</button>}
+          </div>
+        ))}
       <textarea
         name="topic"
         className="textareaField"

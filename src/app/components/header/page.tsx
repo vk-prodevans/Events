@@ -1,20 +1,24 @@
 import React from "react";
 import Image from "next/image";
 import "../../Styles/Header.css";
+import { useRouter } from 'next/navigation'
 
 const Header = () => {
   return (
     <div>
       <header>
-        <div className="image-container">
+        <div >
           <Image
+            className="image-container"
             src="/prodevans-logo.png"
             alt="logo"
             width={200}
             height={100}
+            
           />
         </div>
-        <h1 className="heading">Weekly Demo</h1>
+        <div className="heading">
+        <h1 >Weekly Demo</h1></div>
         <div className="search">
           <input
             className="srch"
@@ -33,6 +37,12 @@ const Header = () => {
 };
 
 export function HomepageHeader() {
+   const router = useRouter();
+
+  const handleClick = () => {
+  
+    router.push("/pages/dashboard");
+  };
   return (
     <div className="navbar">
       <div className="icon">
@@ -46,7 +56,10 @@ export function HomepageHeader() {
       <div className="menu">
         <ul>
           <li>
-            <a href="#">DASHBOARD</a>
+            <div>
+      
+      <button onClick={handleClick}> Dashboard</button>
+    </div>
           </li>
           <li>
             <a href="#" className="login-btn">
