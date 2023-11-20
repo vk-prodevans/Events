@@ -1,35 +1,50 @@
 import React from 'react';
 import '../../styles/AllDemo.css'
+import { useState } from 'react';
 
 const AllDemo: React.FC = () => {
-  const toggleDropdown = () => {
-    const dropdown = document.querySelector('.dropdown') as HTMLElement | null;
+  const [isExpanded, setExpanded] = useState(false);
 
-    if (dropdown) {
-      dropdown.classList.toggle('active');
-
-      const listData = document.querySelector('.listData') as HTMLElement | null;
-
-      if (listData) {
-        listData.style.display = listData.style.display === 'none' ? 'flex' : 'none';
-      }
-    }
+  const toggleVisibility = () => {
+    setExpanded(!isExpanded);
   };
 
   return (
-    <>
-      <div className="dropdown" onClick={toggleDropdown}>
-        <span style={{ fontSize: '30px' }}></span>
-      </div>
-      <div className="listData">
-        <div className="data">
-          <a href="#">Date</a>
-          <a href="#">Topic</a>
-          <a href="#">Presented By</a>
-        </div>
-      </div>
-    </>
+  <div>
+      <div className="actions">
+        <a href="#" className="toggleButton" onClick={toggleVisibility}>
+          {isExpanded ? '-' : '+'}
+        </a>
+        {isExpanded && (
+          <div className='toggleData'>
+          <table className="data">
+            <tbody>
+              <tr>
+                <td>
+                 Date
+                </td>
+                <td>
+                 Topic
+                </td>
+                <td>
+                  Presented By
+                  </td>
+                  <td>
+                <a href="#" className="button">
+         Actions
+            </a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          </div>
+          
+        )}
+        
+     </div>
+    </div>
   );
 };
 
-export default AllDemo;
+export default AllDemo

@@ -1,101 +1,95 @@
-
 .logo img {
-    /* padding: 10px; */
-    width: 100px;
-    height: auto;
-  }
-  /*
+  /* padding: 10px; */
+  width: 100px;
+  height: auto;
+}
+
+/*
   <img alt="PD Logo" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdlightthemebluetext.7167543f.png&w=1920&q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdlightthemebluetext.7167543f.png&w=3840&q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdlightthemebluetext.7167543f.png&w=3840&q=75" decoding="async" data-nimg="intrinsic" style="">
   */
 
-  .header-content {
-    flex: 1;
-    text-align: center;
-  }
- .heading{
-  font-size: 30px;
-  align-items: center;
- }
-
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #24262b;
-    color: white;
-    padding: 15px;
-    /* border: 3px solid rgb(16, 15, 15); */
-    
-  }
-  
-  .search{
-    width: 330px;
-    float: left;
-    margin-left: 270px;
-  }
-  
-  .srch{
-    font-family: 'Times New Roman';
-    width: 200px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #fdfbfa;
-    margin-top: 13px;
-    color: #fff;
-    border-right: none;
-    font-size: 16px;
-    float: left;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-  }
-  
-  .btn{
-    width: 100px;
-    height: 40px;
-    background: #ff7200;
-    border: 2px solid #fdfbfa;
-    margin-top: 13px;
-    color: #fff;
-    font-size: 15px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    transition: 0.2s ease;
-    cursor: pointer;
-  }
-  .btn:hover{
-    color: #000;
-  }
-  
-  .btn:focus{
-    outline: none;
-  }
-  
-  .srch:focus{
-    outline: none;
-  }
-
-/* ......home header css...... */
-.navbar{
-  background-color: #333; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px;
-  height: 80px; 
-}
-
-/* CSS for the image container */
-.icon {
+.header-content {
+  flex: 1;
   text-align: center;
 }
 
-/* CSS for the image */
+.heading {
+  font-size: 30px;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #24262b;
+  color: white;
+  padding: 15px;
+  /* border: 3px solid rgb(16, 15, 15); */
+
+}
+
+.search {
+  width: 330px;
+  float: left;
+  margin-left: 270px;
+}
+
+.srch {
+  font-family: 'Times New Roman';
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fdfbfa;
+  margin-top: 13px;
+  color: #fff;
+  border-right: none;
+  font-size: 16px;
+  float: left;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  background: #ff7200;
+  border: 2px solid #fdfbfa;
+  margin-top: 13px;
+  color: #fff;
+  font-size: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #000;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.srch:focus {
+  outline: none;
+}
+
+/* home css */
+
 .icon img {
-  width: 200px; 
-  height: auto; 
-  display: block;
-  margin: 0 auto;
+  padding: 11px;
+  width: 100px;
+  height: auto;
+}
+.navbar{
+  background-color: #333; /* Background color for the navigation bar */
+  display: flex;
+  justify-content: space-between; /* Place logo and menu at the extremes */
+  align-items: center;
+    padding: 8px; 
 }
 
 .menu ul {
@@ -105,20 +99,23 @@
 }
 
 .menu ul li {
-  display: inline-block;
-  margin-right: 15px;
- 
+    display: inline;
+   margin-right: 15px;
 }
 
-/* Style for buttons */
-.menu .login-btn,
-.menu .dashboardButton {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+}
+.menu a:hover {
+  /* text-decoration: underline; */
+  color: #ff7200;
 }
 
-/* Common button styles */
+   
+/* css for login and logout button */
 .menu .login-btn,
 .menu .dashboardButton {
   padding: 8px 15px;
@@ -133,8 +130,13 @@
 
 /* Button hover effects */
 .menu .login-btn:hover,
-.menu .dashboardButton:hover {
-  background-color: #ff7200;
+.menu .logout-btn:hover {
+  background-color:#ff7200;
   color: #333;
 }
 
+
+.image-container {
+  height: 50px;
+  width: 200px;
+}
