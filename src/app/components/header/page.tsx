@@ -4,7 +4,6 @@ import "../../Styles/Header.css";
 
 const Header = () => {
   return (
-    <div>
       <header>
         <div >
           <Image
@@ -17,7 +16,7 @@ const Header = () => {
           />
         </div>
         <div className="heading">
-        <h1 >Weekly Demo</h1></div>
+        <h3>Weekly Demo</h3></div>
         <div className="search">
           <input
             className="srch"
@@ -31,7 +30,6 @@ const Header = () => {
           </a>
         </div>
       </header>
-    </div>
   );
 };
 
