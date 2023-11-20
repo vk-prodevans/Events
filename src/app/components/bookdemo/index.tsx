@@ -1,35 +1,23 @@
-import React from 'react'
-import { useState } from 'react';
-// import './Styles/Demo.css'
+import React, { useState } from 'react';
 import UploadFile from '../uploadFile';
 import TechVersionDropdown from '../techVersionDropdown';
-import '../../styles/Demo.css'
+import '../../styles/Demo.css';
 
 const BookDemo = () => {
-  const [formCounter, setFormCounter] = useState(1);
-  const [inputValue, setInputValue] = useState<string>('');
-  const [isValid, setIsValid] = useState<boolean>(true);
+  
    const [formData, setFormData] = useState({
     names: ['', '', ''],
     emails: ['', '', ''],
     topic: '',
     description: '',
     techStack: '',
-   });
-   const addFormGroup = () => {
-    setFormCounter(formCounter + 1);
-  };
-  const removeFormGroup = (index:number) => {
-    
-    const updatedFormGroups = [...Array(formCounter)].filter((_, i) => i !== index);
-    setFormCounter(updatedFormGroups.length);
-  };
+  });
 
-  // const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
-  //   const updatedNames = [...formData.names];
-  //   updatedNames[index] = e.target.value;
-  //   setFormData({ ...formData, names: updatedNames });
-  // };
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
+    const updatedNames = [...formData.names];
+    updatedNames[index] = e.target.value;
+    setFormData({ ...formData, names: updatedNames });
+  };
 
   
 
@@ -48,30 +36,46 @@ const BookDemo = () => {
     setIsValid(isValidInput);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    // Handle form submission here
+    // Add form submission logic here
+
+    // Check for errors before submitting
+    const hasErrors = nameErrors.some((error) => error !== '');
+    if (hasErrors) {
+      // Handle errors, e.g., display a message or prevent form submission
+      console.log('Form has errors. Please correct them before submitting.');
+    } else {
+      // Form submission logic
+      console.log('Form submitted successfully:', formData);
+    }
   };
 
   return (
     <form className="contactForm" onSubmit={handleSubmit}>
-       {[...Array(formCounter)].map((_, index) => (
-          <div className="form-group" key={`group${index + 1}`}>
-            <label htmlFor={`name${index + 1}`}>Name</label>
-           <input type="text" id={`name${index + 1}`} pattern="^[a-zA-Z\s]+$" onChange={handleInput} placeholder="Enter name" />
-            {!isValid && <p style={{ color: 'red' }}>Please Enter Vlid name</p>}
-            <label htmlFor={`email${index + 1}`}>Email</label>
-           <input type="text" id={`email${index + 1}`} placeholder="Enter email" onChange={handleEmailChange} />
-            {!isValid && <p style={{ color: 'red' }}>Please Enter Vlid email</p>}
-            <button type="button" className='add-btn' onClick={addFormGroup}>+</button>
-            {formCounter > 1 && <button type="button" className='remove-btn' onClick={() => removeFormGroup(index)}>-</button>}
-          </div>
-        ))}
+      {formData.names.map((name, index) => (
+        <div key={index} className='inputGroup'>
+          <input
+            type="text"
+            className='inputField'
+            placeholder={`Name ${index + 1}`}
+            value={name}
+            onChange={(e) => handleNameChange(e, index)}
+          />
+          <input
+            type="email"
+            className="inputField"
+            placeholder={`Email ${index + 1}`}
+            value={formData.emails[index]}
+            onChange={(e) => handleEmailChange(e, index)}
+          />
+        </div>
+      ))}
       <textarea
         name="topic"
         className="textareaField"
@@ -86,25 +90,12 @@ const BookDemo = () => {
         value={formData.description}
         onChange={handleInputChange}
       />
-      {/* <select
-        name="techStack"
-        className='selectField'
-        value={formData.techStack}
-        onChange={handleInputChange}
-      >
-        <option value="">Select Tech Stack</option>
-        <option value="React">React</option>
-        <option value="Node.js">Node.js</option>
-        <option value="Python">Python</option>
-       
-          </select> */}
-      <TechVersionDropdown></TechVersionDropdown>
-          <label htmlFor="">File</label>
-          <UploadFile></UploadFile>
+      <TechVersionDropdown />
+      <label htmlFor="">File</label>
+      <UploadFile />
       <button type="submit" className='submitButton'>Submit</button>
     </form>
+  );
+};
 
-  )
-}
-
-export default BookDemo
+export default BookDemo;

@@ -11,7 +11,7 @@ const Page = () => {
     <div className="main">
       <HomepageHeader />
       <div className="content">
-        <Image src="/book.jpg" width={270} height={300} alt="PD Logo" />
+        <Image src="/Background.png" width={270} height={300} alt="PD Logo" />
         <h1>
           Prodevans Technologies Pvt Ltd <br />
           <span>weekly demo</span> 

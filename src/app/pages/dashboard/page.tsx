@@ -35,7 +35,7 @@ const Page = () => {
           <main className="main-content">
             {selectedContent === 'main' && <h1>Welcome to the Main Page</h1>}
             {selectedContent === 'profile' && <Profile />}
-            {selectedContent === 'all-demo' && <AllDemo />}
+            {/* {selectedContent === 'all-demo' && <AllDemo />} */}
             {(selectedContent === 'demo' && !showDemoContent) && (
               <Demo onSubmit={handleDemoSubmit} />
             )}
