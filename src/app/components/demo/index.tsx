@@ -1,11 +1,19 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import UploadFile from '../uploadFile';
 import TechVersionDropdown from '../techVersionDropdown';
 import '../../styles/slotdate.css'
 
 const Demo = ({onSubmit}) => {
+
+  // useEffect(() => {
+  //   fetch("http://localhost:8181/api/event/getdates",{
+  //     method:"GET"
+  //   },).then(Response=>console.log())
+    
+  // }, [])
+  
    return (
      <div className="container">
                 <div className="card">

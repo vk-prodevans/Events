@@ -75,55 +75,66 @@
     outline: none;
   }
 
-/* home css */
-
-.icon img {
-  padding: 11px;
-  width: 100px;
-  height: auto;
-}
+/* ......home header css...... */
 .navbar{
-  background-color: #333; /* Background color for the navigation bar */
+  background-color: #333; 
   display: flex;
-  justify-content: space-between; /* Place logo and menu at the extremes */
+  justify-content: space-between;
   align-items: center;
-    padding: 8px; 
+  padding: 8px;
+  height: 80px; 
+}
+
+/* CSS for the image container */
+.icon {
+  text-align: center;
+}
+
+/* CSS for the image */
+.icon img {
+  width: 200px; 
+  height: auto; 
+  display: block;
+  margin: 0 auto;
 }
 
 .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu ul li {
-    display: inline;
-   margin-right: 15px;
+  display: inline-block;
+  margin-right: 15px;
+ 
 }
 
-.menu a {
-    text-decoration: none;
-    color: white;
-    text-align: right;
-    font-weight: bold;
-}
-.menu a:hover {
-  /* text-decoration: underline; */
-  color: #ff7200;
-}
-
-   
-/* css for login and logout button */
+/* Style for buttons */
 .menu .login-btn,
-.menu .logout-btn {
+.menu .dashboardButton {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Common button styles */
+.menu .login-btn,
+.menu .dashboardButton {
   padding: 8px 15px;
   border: 2px solid #fff;
   border-radius: 5px;
   cursor: pointer;
 }
+.menu .dashboardButton {
+  /* Dashboard specific styles here */
+  background-color: #ff7200;
+}
 
+/* Button hover effects */
 .menu .login-btn:hover,
-.menu .logout-btn:hover {
-  background-color:#ff7200;
+.menu .dashboardButton:hover {
+  background-color: #ff7200;
   color: #333;
 }
+

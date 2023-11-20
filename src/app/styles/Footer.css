@@ -6,7 +6,7 @@
   bottom: 0;
   width: 100%;
   right: 0;
-  height: 115px;
+  /* height: 115px; */
   border: 3px solid rgb(16, 15, 15);
   color: white;
 }
@@ -18,7 +18,7 @@
 
 .social-links a {
   display: inline-block;
-  height: 40px;
+  height: 60px;
   width: 40px;
   background-color: rgba(255, 255, 255, 0.2);
   margin: 0 10px;

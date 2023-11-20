@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import "../../Styles/Header.css";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   return (
@@ -33,29 +34,31 @@ const Header = () => {
 };
 
 export function HomepageHeader() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/pages/dashboard");
+  };
   return (
     <div className="navbar">
       <div className="icon">
         <Image
           src="/prodevans-logo.png"
+          alt="PD Logo"
           width={200}
           height={100}
-          alt="PD Logo"
         />
       </div>
       <div className="menu">
         <ul>
           <li>
-            <a href="#">DASHBOARD</a>
+            <button onClick={handleClick} className="dashboardButton">
+              DASHBOARD
+            </button>
           </li>
           <li>
             <a href="#" className="login-btn">
               LOGIN
-            </a>
-          </li>
-          <li>
-            <a href="#" className="logout-btn">
-              LOGOUT
             </a>
           </li>
         </ul>
