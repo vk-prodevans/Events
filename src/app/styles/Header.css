@@ -24,7 +24,8 @@ header {
   justify-content: space-between;
   background-color: #24262b;
   color: white;
-  padding: 15px;
+  padding: 8px;
+  height: 80px;
   /* border: 3px solid rgb(16, 15, 15); */
 
 }
@@ -75,6 +76,10 @@ header {
 
 .srch:focus {
   outline: none;
+}
+.image-container {
+  height: 50px;
+  width: 200px;
 }
 
 /* home css */
@@ -136,7 +141,3 @@ header {
 }
 
 
-.image-container {
-  height: 50px;
-  width: 200px;
-}
