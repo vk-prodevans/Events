@@ -1,71 +1,84 @@
-.dropdown {
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.dropdown-container {
+    position: absolute;
+    align-items: center;
+    margin: 1rem 2.5rem 1rem 2.5rem ;   ;
+}
+
+.dropdown-button {
     display: flex;
     background-color: black;
-    width: 50vw;
     font-size: xx-large;
-    height: 50px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    border: 0px black solid;
+    height: 4vw;
+    bottom: 0%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     color: white;
     cursor: pointer;
-    justify-content: right;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    padding-bottom: 0%;
+    border: 0 solid black;
+    
 }
 
-
 .listData {
-    display: none;
+    /* display: none; */
     padding-top: 0px;
     margin-top: 0px;
     width: 50vw;
     background-color: blue;
-    -webkit-transition: height 2s ease, height 2s ease;
-    -moz-transition: height 2s ease, height 2s ease;
-    -o-transition: height 2s ease, height 2s ease;
-    transition: height 2s ease, height 2s ease;
-}
-
-.listData :hover {
-    height: 50vh;
-
-    /* display: none; */
-
-}
-
-.dropdown.active .listData {
-    display: flex;
-    flex-direction: row;
+    color: white;
+    justify-content: space-between;
     align-items: center;
+    padding-top:0% ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; ;
 }
 
-.dropdown.active span::after {
-    content: "+";
-    font-size: 90px;
-    height: 10px;
-
-
+.dropdown{
+    width: 75vw;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.listData.active {
+    display: flex;
 }
 
 .dropdown span::after {
     content: "-";
-    font-size: 60px;
+    font-size: 100px;
     height: 10px;
 }
 
 .data {
     display: flex;
-    flex-direction: row;
+}
+.item li{
+    margin-right: 15vw;
+    font-size:large ;
+    width: max-content;
+
 }
 
-.data a {
-    padding: 30px;
-    text-decoration: none;
+
+
+.button {
+    background-color: green;
     color: white;
-
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.dropdown.active {
-    height: 100px;
+.button:hover {
+    background-color: darkgreen;
 }
