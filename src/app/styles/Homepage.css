@@ -3,7 +3,7 @@ body{
     display: block;
 }
 .main{
-    background: linear-gradient(116.18deg,#447ab6,#9933a3 99.08%);
+    background: linear-gradient(116.18deg,#3d4247,#4E65FF ,#447ab6,#3d4247 99.08%);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -20,6 +20,7 @@ body{
     color: #fff;
     position: relative;
     margin-left: 300px;
+    height:60%;
 
 }
 .content img {

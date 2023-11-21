@@ -77,6 +77,10 @@ header {
 .srch:focus {
   outline: none;
 }
+.image-container {
+  height: 50px;
+  width: 200px;
+}
 
 /* home css */
 
@@ -137,7 +141,3 @@ header {
 }
 
 
-.image-container {
-  height: 50px;
-  width: 200px;
-}
